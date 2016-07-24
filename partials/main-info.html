@@ -1,0 +1,17 @@
+<!-- This is a partial page. have only the required code.-->
+<div align="center" ng-controller="DictionaryController">
+<div ng-if="!details">
+    Loading results...
+</div>
+
+<div ng-if="details.results.length>0">
+    <div>
+        <p class="para">
+            <span><b>Definition :</b></span> {{ details.results[0].senses[0].definition }}
+        </p>
+    </div>
+</div>
+<div ng-if="details.results.length==0">
+    No results found.
+</div>
+</div>
